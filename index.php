@@ -72,5 +72,6 @@ uasort($standings, function ($a, $b) {
 });
 
 $teams = array_keys($standings);
+sort($teams);
 
 require('vue.php');
