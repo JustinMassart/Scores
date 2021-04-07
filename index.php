@@ -1,5 +1,6 @@
 <?php
 
+define('TODAY', (new DateTime('now', new DateTimeZone('Europe/Brussels')))->format('M jS, Y'));
 define('FILE_PATH', 'matches.csv');
 
 $matches = [];
