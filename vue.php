@@ -24,21 +24,22 @@
         </tr>
         </thead>
         <tbody>
-        <?php $i = 1 ?>
+        <?php $i = 1; ?>
         <?php foreach ($standings as $team => $teamStats): ?>
             <tr>
                 <td><?= $i++; ?></td>
                 <th scope="row"><?= $team ?></th>
-                <td><?= $teamStats['games'] ?></td>
-                <td><?= $teamStats['points'] ?></td>
-                <td><?= $teamStats['wins'] ?></td>
-                <td><?= $teamStats['losses'] ?></td>
-                <td><?= $teamStats['draws'] ?></td>
-                <td><?= $teamStats['GF'] ?></td>
-                <td><?= $teamStats['GA'] ?></td>
-                <td><?= $teamStats['GD'] ?></td>
+                <td><?= $teamStats['games']; ?></td>
+                <td><?= $teamStats['points']; ?></td>
+                <td><?= $teamStats['wins']; ?></td>
+                <td><?= $teamStats['losses']; ?></td>
+                <td><?= $teamStats['draws']; ?></td>
+                <td><?= $teamStats['GF']; ?></td>
+                <td><?= $teamStats['GA']; ?></td>
+                <td><?= $teamStats['GD']; ?></td>
             </tr>
         <?php endforeach; ?>
+
         </tbody>
     </table>
 </section>
@@ -57,7 +58,8 @@
         <tbody>
         <?php foreach ($matches as $match): ?>
             <tr>
-                <td><?= (new DateTime($match['match-date'], new DateTimeZone('Europe/Brussels')))->format('M jS, Y') ?></td>
+                <td><?= (new DateTime($match['match-date'],
+                        new DateTimeZone('Europe/Brussels')))->format('M l jS, Y') ?></td>
                 <td><?= $match['home-team'] ?></td>
                 <td><?= $match['home-team-goals'] ?></td>
                 <td><?= $match['away-team-goals'] ?></td>

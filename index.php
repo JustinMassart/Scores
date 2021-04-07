@@ -2,7 +2,6 @@
 
 define('TODAY', (new DateTime('now', new DateTimeZone('Europe/Brussels')))->format('M jS, Y'));
 define('FILE_PATH', 'matches.csv');
-
 $matches = [];
 $standings = [];
 $teams = [];
@@ -35,7 +34,6 @@ while ($line = fgetcsv($handle, 1000)) {
     if (!array_key_exists($awayTeam, $standings)) {
         $standings[$awayTeam] = getEmptyStatsArray();
     }
-
     $standings[$homeTeam]['games']++;
     $standings[$awayTeam]['games']++;
 
@@ -53,12 +51,10 @@ while ($line = fgetcsv($handle, 1000)) {
         $standings[$awayTeam]['wins']++;
         $standings[$homeTeam]['losses']++;
     }
-
     $standings[$homeTeam]['GF'] += $match['home-team-goals'];
     $standings[$homeTeam]['GA'] += $match['away-team-goals'];
     $standings[$awayTeam]['GF'] += $match['away-team-goals'];
     $standings[$awayTeam]['GA'] += $match['home-team-goals'];
-
     $standings[$homeTeam]['GD'] = $standings[$homeTeam]['GF'] - $standings[$homeTeam]['GA'];
     $standings[$awayTeam]['GD'] = $standings[$awayTeam]['GF'] - $standings[$awayTeam]['GA'];
 
