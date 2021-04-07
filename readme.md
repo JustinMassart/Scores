@@ -1,3 +1,5 @@
-# Scores
+# scores
 
-Écrivez un programme qui permet d'encoder des matchs ainsi que les points de différentes équipes de sport.
+![statement](statement.png)
+
+[Les vidéos](https://www.youtube.com/playlist?list=PLg9HTCEtaWMgIznz_wuq2VNygSAa69c0D)
